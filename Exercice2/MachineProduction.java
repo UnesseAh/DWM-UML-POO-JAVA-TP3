@@ -17,10 +17,6 @@ public class MachineProduction {
         plafondProduction = plafond;
     }
 
-    public static int getTotalProduits() {
-        return totalProduits;
-    }
-
     public boolean produire(int quantite) {
         if (totalProduits + quantite <= plafondProduction) {
             this.nombreProduits += quantite;
@@ -31,5 +27,9 @@ public class MachineProduction {
             System.out.println("Plafond de production atteint pour la machine " + id);
             return false;
         }
+    }
+
+    public static int getTotalProduits() {
+        return totalProduits;
     }
 }
